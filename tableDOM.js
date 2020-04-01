@@ -28,11 +28,15 @@ let r3c3Text = document.createTextNode("$20,000");
 
 // start with body element
 let docTree = document.body;
-
+docTree.setAttribute("align", "center"); // used setAttribute to center body
 docTree.appendChild(tableElement); // add table element
 docTree = docTree.lastChild; // move to table element
+docTree.setAttribute("align", "center"); // used setAttribute to center table
+docTree.style.border = "thin solid"; // added a thin solid border to table
+docTree.setAttribute("border", "bottom"); // used setAttribute to place borders between cells
 docTree.appendChild(r1Element); // add row 1 element
 docTree = docTree.lastChild; // move to row 1 element
+docTree.style.color = "red";
 docTree.appendChild(r1c1Element); // add cells to row 1
 docTree.appendChild(r1c2Element);
 docTree.appendChild(r1c3Element);
@@ -61,6 +65,7 @@ docTree = docTree.parentNode; // move back up into table
 
 docTree.appendChild(r3Element); // add third row with cells and data
 docTree = docTree.lastChild;
+docTree.style.color = "red";
 docTree.appendChild(r3c1Element);
 docTree.appendChild(r3c2Element);
 docTree.appendChild(r3c3Element);
@@ -70,3 +75,6 @@ docTree = docTree.nextSibling;
 docTree.appendChild(r3c2Text);
 docTree = docTree.nextSibling;
 docTree.appendChild(r3c3Text);
+
+
+
