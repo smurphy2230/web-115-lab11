@@ -13,14 +13,17 @@ table.appendChild(tableBody);
 for(let i = 0; i < tableData.length; i++) {
     let row = document.createElement('tr');
     for(let j = 0; j < tableData[i].length; j++) {
-        let element = null;
+        let element = null; // create a variable for table elements and data
 
+        // i == 0 signifies the table head any other value is table cells
         if(i == 0) {
             element = document.createElement('th');
-            element.style.color = "red"; // style object changed font color to red
+            // style object to make table head red and italic
+            element.style.color = "red"; 
             element.style.fontStyle = "italic";
         } else {
             element = document.createElement('td');
+            // style object to add thin border to table data
             element.style.border = "thin solid";
         }
         
@@ -33,8 +36,9 @@ for(let i = 0; i < tableData.length; i++) {
 
 }
 
+// appends table to body element
 document.body.appendChild(table);
 document.body.setAttribute("align", "center"); // center body text
 table.setAttribute("align", "center"); // center table
-table.setAttribute("style", "background-color: lightblue")
-table.style.border = "solid";
+table.setAttribute("style", "background-color: lightblue"); // light blue background for the table
+table.style.border = "solid"; // style object to add thin border to table data
