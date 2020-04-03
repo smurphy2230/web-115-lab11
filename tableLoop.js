@@ -17,8 +17,11 @@ for(let i = 0; i < tableData.length; i++) {
 
         if(i == 0) {
             element = document.createElement('th');
+            element.style.color = "red"; // style object changed font color to red
+            element.style.fontStyle = "italic";
         } else {
             element = document.createElement('td');
+            element.style.border = "thin solid";
         }
         
         element.innerText = tableData[i][j];
@@ -33,4 +36,5 @@ for(let i = 0; i < tableData.length; i++) {
 document.body.appendChild(table);
 document.body.setAttribute("align", "center"); // center body text
 table.setAttribute("align", "center"); // center table
+table.setAttribute("style", "background-color: lightblue")
 table.style.border = "solid";
