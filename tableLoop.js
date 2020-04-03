@@ -31,3 +31,6 @@ for(let i = 0; i < tableData.length; i++) {
 }
 
 document.body.appendChild(table);
+document.body.setAttribute("align", "center"); // center body text
+table.setAttribute("align", "center"); // center table
+table.style.border = "solid";
