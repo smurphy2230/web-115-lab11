@@ -37,6 +37,8 @@ for(let i = 0; i < tableData.length; i++) {
 }
 
 // appends table to body element
+let myInfo = document.getElementById("myInfo");
+myInfo.setAttribute("align", "center");
 document.body.appendChild(table);
 document.body.setAttribute("align", "center"); // center body text
 table.setAttribute("align", "center"); // center table
