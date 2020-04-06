@@ -5,9 +5,11 @@ let tableData = [
     ['Pontiac', '140mph', '$20,000']
 ];
 
+// create table and tableBody elements
 let table = document.createElement('table');
 let tableBody = document.createElement('tbody');
 
+// append tableBody to table
 table.appendChild(tableBody);
 
 for(let i = 0; i < tableData.length; i++) {
@@ -36,9 +38,9 @@ for(let i = 0; i < tableData.length; i++) {
 
 }
 
-// appends table to body element
 let myInfo = document.getElementById("myInfo");
 myInfo.setAttribute("align", "center");
+// appends table to body element
 document.body.appendChild(table);
 document.body.setAttribute("align", "center"); // center body text
 table.setAttribute("align", "center"); // center table
